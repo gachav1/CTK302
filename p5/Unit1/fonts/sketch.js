@@ -14,12 +14,12 @@ function draw() {
 
   fill('white');
   textFont(f);
-  textSize(60);
-  text("hello", width/2, height/2);
+  textSize(20);
+  text("when life gives you lemons, don't make lemonade!", width/2, height/2);
 
-  fill('red');
+  fill('yellow');
   textFont(f1);
   textSize(30);
-  text("hello", width/2, height/2 + 80);
+  text("Make life take the lemons back!", width/2, height/2 + 80);
 
 }
