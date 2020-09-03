@@ -25,7 +25,7 @@ function draw() {
   if (mouseIsPressed) {
     arc(200, 210, 130, 100, 0, PI); // smile - (this line is correct)
   } else {
-    arc(0, 270, 130, 100, PI, 0); // frown
+    arc(200, 270, 130, 100, PI, 0); // frown
 
   }
 
@@ -38,9 +38,9 @@ function draw() {
 
     if (mouseIsPressed) {
       print("for debugging");
-
-
-      text("mouseX" + ", " "mouseY", 10, 10); // print mouse locations to canvas
-
     }
+
+    text(mouseX + ", "
+      mouseY, 10); // print mouse locations to canvas
+
   }
