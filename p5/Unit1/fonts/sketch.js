@@ -12,7 +12,7 @@ function draw() {
   background(100) ;
 
   textFont(f);
-  textSize(60);
+  textSize(600);
 
   text("hello", width/2, height/2);
 
