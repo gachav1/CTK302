@@ -9,7 +9,8 @@ function draw() {
 
   //change to text
   //rect(x, 250, 50, 50);
-  text("word", x, 250);
+  textSize(35);
+  text("HELLO", x, 250);
   x += 5;
 
   if (x > width) {
