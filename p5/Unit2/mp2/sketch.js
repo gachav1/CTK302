@@ -1,8 +1,8 @@
 let ipod;
 let state = 0;
 let song1, song2, song3;
-let x = 0;
-let velocity = 10;
+let numberOfTouches ;
+
 let timer = 0;
 
 function preload() {
@@ -32,15 +32,14 @@ function setup() {
 }
 
 function draw() {
+
+state = touches.length;
+
   background(100);
 
   textFont(20);
   fill('black');
-  rect(x, 200, 75, 20);
-  x = x + velocity;
-  if (x > 200) {
-    x = 0;
-  }
+
 
   switch (state) {
 
@@ -48,7 +47,7 @@ function draw() {
       text("1", 100, 100);
       song1.play();
       state = 1;
-      velocity = 0;
+
       break;
 
     case 1:
@@ -59,18 +58,14 @@ function draw() {
       text('Red Hot Chili Peppers', 175, 125);
       text('Stadium Arcadium', 175, 150);
 
-      timer = timer + 1;
-      if (timer > 5 * 60) {
-        state = 1;
-        timer = 0;
-      }
+
       break;
 
     case 2:
       image(ipod, 10, 10);
       song2.play();
       state = 3;
-      velocity = 0;
+
       break;
 
     case 3:
@@ -82,14 +77,14 @@ function draw() {
       text("Sabatoge", 175, 100);
       text('Beastie Boys', 175, 125);
       text('Stadium Arcadium', 175, 150);
-      velocity = 0;
+
       break;
 
     case 4:
       image(ipod, 10, 10);
       song3.play();
       state = 5;
-      velocity = 0;
+
       break;
 
     case 5:
@@ -99,10 +94,24 @@ function draw() {
       text("Pumped up Kids", 175, 100);
       text('Foster the People', 175, 125);
       text('Torches', 175, 150);
-      velocity = 0;
+
       break;
 
+
+
   }
+
+  timer = timer + 1;
+  if (timer > 7 * 60) {
+    timer = 0 ;
+    state++;
+    if (state > 5) state = 0;
+
+    song1.pause();
+    song2.pause();
+    song3.pause();
+  }
+
 }
 
 
