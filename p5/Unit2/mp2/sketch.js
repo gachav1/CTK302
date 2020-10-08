@@ -1,7 +1,6 @@
 let ipod;
 let state = 0;
 let song1, song2, song3;
-let numberOfTouches ;
 
 let timer = 0;
 
@@ -25,19 +24,15 @@ function preload() {
 
 
 function setup() {
-
+textFont(20);
   createCanvas(500, 500);
   rectMode(CENTER);
   image(ipod, 10, 10);
 }
 
 function draw() {
-
-state = touches.length;
-
   background(100);
 
-  textFont(20);
   fill('black');
 
 
@@ -54,9 +49,9 @@ state = touches.length;
       image(ipod, 10, 10);
       image(red, 60, 75, 100, 100);
       text('1/3', 50, 65);
-      text("Snow", 175, 100);
-      text('Red Hot Chili Peppers', 175, 125);
-      text('Stadium Arcadium', 175, 150);
+      text("Snow", 163, 100);
+      text('Red Hot Chili Peppers', 163, 125);
+      text('Stadium Arcadium', 163, 150);
 
 
       break;
@@ -102,7 +97,7 @@ state = touches.length;
   }
 
   timer = timer + 1;
-  if (timer > 7 * 60) {
+  if (timer > 10 * 60) {
     timer = 0 ;
     state++;
     if (state > 5) state = 0;

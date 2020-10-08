@@ -1,7 +1,7 @@
 let ipod;
 let state = 0;
 let song1, song2, song3;
-
+let numberOfTouches ;
 let timer = 0;
 
 function preload() {
@@ -31,6 +31,7 @@ function setup() {
 }
 
 function draw() {
+
   background(100);
 
   textFont(20);
