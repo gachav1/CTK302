@@ -1,18 +1,17 @@
 let ipod;
 let state = 0;
 let song1, song2, song3;
-
 let timer = 0;
 
 function preload() {
   ipod = loadImage('assets/ipod.jpg');
   red = loadImage('assets/red.jpg')
   beast = loadImage('assets/beast.jpg')
-  torches = loadImage('assets/torches.jpg')
+  galbum = loadImage('assets/galbum.jpg')
 
   song1 = loadSound("assets/snow.mp3");
   song2 = loadSound("assets/sabatage.mp3");
-  song3 = loadSound("assets/pumped.mp3");
+  song3 = loadSound("assets/10-2000.mp3");
 
   song1.loop();
   song1.pause();
@@ -24,7 +23,6 @@ function preload() {
 
 
 function setup() {
-textFont(20);
   createCanvas(500, 500);
   rectMode(CENTER);
   image(ipod, 10, 10);
@@ -84,11 +82,11 @@ function draw() {
 
     case 5:
       image(ipod, 10, 10);
-      image(torches, 60, 75, 100, 100);
+      image(galbum, 60, 75, 100, 100);
       text('3/3', 50, 65);
-      text("Pumped up Kids", 175, 100);
-      text('Foster the People', 175, 125);
-      text('Torches', 175, 150);
+      text("19-2000", 175, 100);
+      text('Gorrilaz', 175, 125);
+      text('Gorrilaz', 175, 150);
 
       break;
 
