@@ -6,19 +6,7 @@ let maxCars = 5;
 let frogPos;
 let state = 0;
 let timer = 0;
-let song1, song2;
 
-function preload() {
-
-  song1 = loadSound("assets/snow.mp3");
-  song2 = loadSound("assets/10-2000.mp3");
-
-  song1.loop();
-  song1.pause();
-  song2.loop();
-  song2.pause();
-
-}
 
 function setup() {
   createCanvas(600, 600);
@@ -43,7 +31,6 @@ function setup() {
 function draw() {
   switch (state) {
     case 0:
-      song1.play();
       background('teal');
       textFont(f1);
       textSize(50);
@@ -65,7 +52,6 @@ function draw() {
       background('red');
       text("YOU WON", width / 2, height / 2);
       image(net, 200, 320, 200, 250)
-      song1.pause();
       break;
 
     case 3:
