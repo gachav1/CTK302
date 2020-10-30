@@ -40,7 +40,6 @@ function draw() {
       break;
 
     case 1:
-    song2.play();
       game();
       timer++;
       if (timer > 10 * 60) {
