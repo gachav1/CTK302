@@ -15,7 +15,7 @@ function setup() {
 
   // HERE is the call to get the weather.
 
-  var myCityString = 'https://api.openweathermap.org/data/2.5/weather?q=Normal,IL,US&units=imperial&';
+  var myCityString = 'https://api.openweathermap.org/data/2.5/weather?q=Nashville,TN,US&units=imperial&';
 
   //You can also use "zipcode" - var myJSONString = 'https://api.openweathermap.org/data/2.5/weather?zip=61820,us&units=imperial&';
 
